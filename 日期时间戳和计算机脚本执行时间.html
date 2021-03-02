@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const date = new Date();//获取当前时间，typeof是对象
+
+        const nowdate = Date.now();//获取前时间，但是是字符串 
+当
+        const start = Date.now();
+        for (let i = 0; i < 200000; i++) {
+            const end = Date.now()
+            console.log((end - start) / 1000 + "秒");
+        }
+
+
+
+
+        console.time("for");
+        for (let i = 0; i < 200000; i++) {
+
+        }
+        console.timeEnd("for");
+
+
+
+        let birthday = new Date("1996-10-17 20:45:18")
+
+        let nowday = new Date();
+
+        console.log((nowday - birthday) / 1000 / 60 / 60 / 24 / 365);
+        console.log(birthday);
+
+
+        //时间戳和标准时间的相互转化
+        console.log(birthday * 1);
+        console.log(Number(birthday));
+        console.log(birthday.valueOf());
+        console.log(birthday.getTime());
+
+        const timechuo = birthday.valueOf();
+        new Date(timechuo);
+
+        
+
+
+    </script>
+</body>
+
+</html>

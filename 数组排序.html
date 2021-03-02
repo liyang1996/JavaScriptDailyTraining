@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+    arr = arr.sort(function (a, b) {
+        return a - b;
+    })
+    console.log(arr);
+
+    //实现sort
+    function sort(array){
+        for(let i in array){
+            for(let j in array){
+                if(array[n]<array[j]){
+                    let temp =array[n];
+                    array[n]=array[j];
+                    array[j]=temp;
+                }
+            }
+        }
+        return array
+    }
+    console.log(sort(arr));
+</script>
+
+</html>

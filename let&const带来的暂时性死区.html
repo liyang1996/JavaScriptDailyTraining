@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+</body>
+<script>
+        //强烈建议使用let 或const
+        console.log(web);
+        //如果改成var就不报错，改成let的时候就报错
+        //声明之后在使用
+        let web = "asdfgh";
+        const weba = "ad";
+        function fc() {
+            console.log(web);
+            let web = 'houchangcun';
+        }
+        fc();//baocuo
+
+
+        function run(a = b, b = 3) {
+
+        }
+        run() //报错
+
+        function runtwo(a = 3, b = a) {
+
+        }
+        runtwo();
+
+        
+
+
+    </script>
+</html>

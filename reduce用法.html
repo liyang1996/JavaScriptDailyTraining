@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let arr = [1, 2, 3, 4];
+    // let sum = arr.reduce(function (pre, value, index, arr) {
+    //     console.log(pre, value, index);//1 2 1  ,3 3 2 ,6 4 3
+    //     return pre + value;
+    // })
+    // console.log(arr, sum)
+
+    // let arr = [1, 2, 3, 4];
+    // let sum = arr.reduce(function (pre, value, index, arr) {
+    //     console.log(pre, value, index);// 0 1 0,1 2 1  ,3 3 2 ,6 4 3
+    //     return pre + value;
+    // }, 0)
+    // console.log(arr, sum)
+
+    //如果没有提供0，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。
+    //如果提供0，从索引0开始。
+
+
+    //如果数组为空的情况下呢？
+    // var arr = [];
+    // var sum = arr.reduce(function (prev, cur, index, arr) {
+    //     console.log(prev, cur, index);
+    //     return prev + cur;
+    // })
+    //报错，"TypeError: Reduce of empty array with no initial value"
+
+
+    // var arr = [];
+    // var sum = arr.reduce(function (prev, cur, index, arr) {
+    //     console.log(prev, cur, index);
+    //     return prev + cur;
+    // }, 0)
+    // console.log(arr, sum); // [] 0
+
+    //所以一般来说我们提供初始值通常更安全
+    var arr = [1, 2, 3, 4];
+    var sum = arr.reduce((x, y) => x + y)
+    var mul = arr.reduce((x, y) => x * y)
+    console.log(sum); //求和，10
+    console.log(mul); //求乘积，24
+
+
+
+    let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+    let nameNum = names.reduce((pre, cur) => {
+        if (cur in pre) {
+            pre[cur]++
+        } else {
+            pre[cur] = 1
+        }
+        return pre
+    }, {})
+    console.log(nameNum); //{Alice: 2, Bob: 1, Tiff: 1, Bruce: 1}
+
+    //数组去重
+    let arr = [1, 2, 3, 4, 4, 1]
+    let newArr = arr.reduce((pre, cur) => {
+        if (!pre.includes(cur)) {
+            return pre.concat(cur)
+        } else {
+            return pre
+        }
+    }, [])
+    console.log(newArr);// [1, 2, 3, 4]
+
+    //（3）将二维数组转化为一维
+    let arr = [[0, 1], [2, 3], [4, 5]]
+    let newArr = arr.reduce((pre, cur) => {
+        return pre.concat(cur)
+    }, [])
+    console.log(newArr); // [0, 1, 2, 3, 4, 5]
+
+    //将多维数组转化为一维
+    let arr = [[0, 1], [2, 3], [4, [5, 6, 7]]]
+    const newArr = function (arr) {
+        return arr.reduce((pre, cur) => pre.concat(Array.isArray(cur) ? newArr(cur) : cur), [])
+    }
+    console.log(newArr(arr)); //[0, 1, 2, 3, 4, 5, 6, 7]
+
+    //对象里的属性求和
+    var result = [
+        {
+            subject: 'math',
+            score: 10
+        },
+        {
+            subject: 'chinese',
+            score: 20
+        },
+        {
+            subject: 'english',
+            score: 30
+        }
+    ];
+
+    var sum = result.reduce(function (prev, cur) {
+        return cur.score + prev;
+    }, 0);
+    console.log(sum) //60
+
+</script>
+
+</html>

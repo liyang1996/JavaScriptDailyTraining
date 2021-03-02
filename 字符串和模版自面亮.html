@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let hg = 'bai"du.com';
+        console.log(hg);
+        let name = "tengxun";
+        let age = "43";
+        console.log(name + "chengliyu" + age);
+        console.log(`${name}cheng
+        liyu${age}`);
+
+
+        //模版自变量
+        function show(params) {
+            return "gooogle.com";
+
+        }
+        let web = `www.${show()}`;
+        console.log(web);
+
+        //标签模版
+        let company = [
+            { boss: "mahuateng", age: "47" },
+            { boss: "mahuateng", age: "47" },
+            { boss: "mahuateng", age: "47" },
+        ]
+        function template() {
+            return `<ul>
+                ${company.map(item =>linsk
+                `<li>laobanming:${item.boss}, nianling:${item.age}</li>`
+            ).join("")
+                }</ul>`;
+        }
+        function linsk(strings , ...vars) {
+            ////vars是获取所有的字符串变量，然后给放到一个数组里
+            console.log(strings);
+        }
+        document.body.innerHTML += template();
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

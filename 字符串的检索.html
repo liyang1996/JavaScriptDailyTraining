@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "tencent";
+        //console.log(lastIndexOf('e'));//从后边开始查找
+        console.log(str.includes('t'));//返回布尔类型
+        console.log(str.indexOf('t', 12));//找不到返回-1，找到了但是在起始位置的时候是0
+        console.log(str.startsWith('t'));//是否从开始位置开始
+        console.log(str.endsWith("t"));
+        //字符串替换
+        const houdunren = "houdunren.com";
+        houdunren.replace('houdunren.com', 'google.com');
+
+        // const arr = ["php", "javascript"];
+        // const strin = "我爱腾讯，腾讯是我的梦想php javascript";
+        // const replaceString = arr.reduce((pre, word) => {
+        //     console.log(pre);
+        //     pre.replace(arr, `<a herf ="?w=${arr}">${arr}</a>`)
+        // }, strin);
+        // console.log(replaceString);
+
+        function number(number) {
+            let numbera = number.toString();
+            return numbera.slice(0, 3) + '****' + numbera.substr(7);
+
+        }
+
+        console.log(number(15144120134));
+        
+        //false的数据类型为0，true为1
+
+        //空数组[],{}转化为true，只有一个数字的时候可以转化为布尔值，有多个数字的时候就不能转化了打印NAN
+
+
+    </script>
+</body>
+
+</html>

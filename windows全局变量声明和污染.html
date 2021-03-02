@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //let const 在同一个作用域不可以重复声明，
+
+    var web = 'google.com';
+    console.log(window.web); //可以打印
+
+    var screenLeft = 88;
+    console.log(window.screenLeft);//窗口据左侧永远打印88；
+
+    let screenLeft = 100;
+    console.log(window.screenLeft);//窗口据左侧不受影响
+
+
+
+
+
+</script>
+
+</html>

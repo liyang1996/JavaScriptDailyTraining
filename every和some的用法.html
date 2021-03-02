@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [11, 22, 90, 100];
+    //every用于对数据的整体判断，比如一个班的同学是不是都及格了 也就是说必须全部为真
+    //some 如果有任何一个返回真，表达式就为真，在数组里遇到一个为真就不再计算了，浪费资源
+    let res = arr.every(function (value) {
+
+        if (value >= 60) {
+            return true
+        }
+        return false;
+
+    })
+    console.log(res);
+</script>
+
+</html>

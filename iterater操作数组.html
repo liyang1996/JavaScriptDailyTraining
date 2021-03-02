@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr=["aaa","bbb"];
+    let keys=arr.keys();//返回数组可迭代对象,也是取索引，
+    let values= arr.values();//取值
+    console.log(keys.next());//{value:0,done:false}
+    console.log(keys.next());//{value:1,done:false}
+    console.log(keys.next());//{value:undefined,done:true}
+</script>
+</html>

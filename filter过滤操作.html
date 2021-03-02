@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = ['hdsms', 'houdunren.com'];
+    let newarr = arr.filter(function (arr, value, index) {
+        return true;
+    })
+    console.log(newarr)//true就打印数组，false就不打印
+
+    let lessons = [
+        { name: "yuwen", score: 50 },
+        { name: "shuxue", score: 100 },
+        { name: "yingyu", score: 80 },
+    ];
+    let lesson = lessons.filter(function (value) {
+        return value['score'] == 100
+    })
+    console.log(lesson);
+
+
+    //自定义过滤函数
+    let hd = [1, 2, 3, 4, 5];
+    function filter(array, callback) {
+        let newarr = [];
+        for (let value of array) {
+            if (callback(value) == true) {
+                newarr.push(value)
+            }
+        }
+        return newarr
+    }
+    filter(hd, function (value) {
+        return value > 2;
+    })
+
+
+
+
+
+
+</script>
+
+</html>

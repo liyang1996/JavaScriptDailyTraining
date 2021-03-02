@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="quanjuwuran.js"></script>
+    <script>
+        console.log($.geturl()); //无法打印url，因为他在函数李白你
+        var web="houdunren.com";//全剧污染里边的web是读不出来的，如果把两个script标签位置互换，
+        //web会等于baidu.com，因为他们俩都是全局变量，他俩在一个作用域
+        
+
+
+        //块作用域就是花括号哪一块
+        //{}可以作为一个作用域，但是要使用let定义变量，()()立即执行函数也可以作为一块作用域
+        var i=99;
+        for(var i = 0; i<5;i++){
+            console.log(i);//01234，把var变成let下边的console就变成了99
+        }
+        console.log(i);//012345
+    </script>
+</html>

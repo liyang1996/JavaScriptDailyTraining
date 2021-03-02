@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Math.max(1,2,34,));
+        let grid=[12,34,34];
+        console.log(Math.max.apply(null,grid));
+
+        //向上取整
+        console.log(Math.ceil(5.1));//6,没有舍入特性
+        console.log(Math.floor(5.0001));//5
+
+        //舍入函数
+        console.log(5.00001.toFixed(2));
+        console.log(Math.round(5.56));//四舍五入
+
+    </script>
+</body>
+</html>

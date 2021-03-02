@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<style>
+.hide{
+    display: none;
+}
+    
+</style>
+
+<body>
+
+    <div>aaaaaa</div>
+    <div>bbbbbb</div>
+    <script>
+        let arr = ["123", "234", "345"];
+        let arra = ["aaa", "bbb", "ccc"];
+        //展开语法
+
+        arr = [...arr, ...arra];
+
+        for (const ietm of arra) {
+            arr.push(ietm);
+        }
+
+        function sum(...arge) {
+            return arge.reduce((s, v) => {
+                return (s += v)
+            })
+        }
+        sum(1, 2, 3, 4, 5);
+
+       let divsa =document.querySelectorAll('div');
+
+
+        //dom节点上使用展开语法
+        //dom节点原型中没有map方法，所以要转成数组
+        
+        Array.from(document.querySelectorAll('div')).map(function(item){
+            console.log(item);
+        })
+
+        //原型链当中的方法
+        
+        //点语法,直接将div转成数组
+        console.log([...divsa]);
+        [...divsa].map(function(item){
+         item.addEventListener('click',function(){
+             this.classList.toggle('hide');
+         })
+        })
+
+
+
+    </script>
+</body>
+
+</html>

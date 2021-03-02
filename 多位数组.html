@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>aaa</div>
+    <div>bbb</div>
+    <script>
+       let divs= document.querySelectorAll('div');
+        Array.from(divs,function(item){//Array.from()里会有第二个参数，第二个参数对数组里的每一个元素进行使用
+            item.innerHTML="wowowo";
+            item.style.backgroundColor="red";
+            return item;
+        }) 
+
+        let array=["aaa","bbb"];
+        console.log(array[0]);
+        let lesson=[{
+            name:"php",
+            age:'33',
+        }]
+
+        //数组是引用类型，const的原理是不改变内存地址，针对数组和对象是可以的，因为数组和对象
+        const arr=[1,2];
+        arr[1]=99;
+        console.log(arr);
+
+
+        //array.of与数组创建细节
+        const hd=["ccc"];
+        hd[3]='ert';//直接定义第四个，第二个和第三个直接用undefined填写
+        
+
+        let cms=new Array(6);//创建6个空元素
+        let arra=Array.of(6)//创建数组，值为6 
+
+
+        //类型检测和转换
+        console.log(Array.isArray(hd));//检测是否为数组
+        console.log(hd.toString());//将数组转化为字符串
+        console.log(String(hd));
+        console.log(hd.join("-"));//使用中划线链接起来
+
+
+
+        //将变量拆分形成数组
+        let mini="iphone";
+        console.log(Array.from(mini));//有length属性的对象都可以用array.form（）
+
+        let duixiang={
+            0:'aa',
+            1:'bb',
+            length:2
+        }
+        console.log(Array.from(duixiang))//这样是不可以转的，如果在对象里家上length属性，就是可以的
+
+        //把文档的dom节点用数组的方式操作
+
+
+
+    </script>
+</body>
+</html>
